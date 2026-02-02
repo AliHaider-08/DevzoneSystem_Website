@@ -62,7 +62,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            From concept to deployment, we create stunning websites, powerful applications, and intelligent solutions that transform your business.
+            Empowering businesses through innovative software solutions that drive growth and efficiency. From concept to deployment, we transform your vision into reality.
           </motion.p>
 
           {/* CTA Buttons */}

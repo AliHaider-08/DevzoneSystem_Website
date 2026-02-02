@@ -16,25 +16,25 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "hello@haidertech.com",
-    link: "mailto:hello@haidertech.com",
+    content: "info@haidertech.com",
+    link: "mailto:info@haidertech.com",
   },
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (234) 567-890",
-    link: "tel:+1234567890",
+    content: "+1 (555) 123-4567",
+    link: "tel:+15551234567",
   },
   {
     icon: MapPin,
     title: "Visit Us",
-    content: "123 Tech Street, Silicon Valley, CA 94000",
+    content: "Tech Hub, Silicon Valley, California, CA 94025",
     link: "#",
   },
   {
     icon: Clock,
     title: "Business Hours",
-    content: "Mon - Fri: 9:00 AM - 6:00 PM",
+    content: "Mon - Fri: 9:00 AM - 6:00 PM EST",
     link: null,
   },
 ];
