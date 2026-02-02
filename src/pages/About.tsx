@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { ArrowRight, Target, Heart, Lightbulb, Users, Award, Rocket, Linkedin, Twitter, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/lib/structured-data";
 
 const team = [
   {
@@ -75,8 +77,26 @@ const techStack = [
 ];
 
 const About = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateOrganizationSchema(),
+      generateBreadcrumbSchema([
+        { name: "Home", url: "https://haidertech.com" },
+        { name: "About", url: "https://haidertech.com/about" },
+      ]),
+    ],
+  };
+
   return (
     <Layout>
+      <SEO
+        title="About Us"
+        description="Learn about HaiderTech's journey, our team of experts, company values, and the technologies we master. 5+ years of experience with 150+ projects delivered."
+        keywords="about HaiderTech, tech company, software development team, company values, tech stack, web development agency"
+        url="https://haidertech.com/about"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 gradient-glow opacity-50" />

@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import { Check, ArrowRight, Code, Smartphone, Palette, Cloud, Brain, Headphones, Zap, Shield, Clock, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const services = [
   {
@@ -98,8 +100,33 @@ const faqs = [
 ];
 
 const Services = () => {
+  const serviceSchemaData = services.map((s) => ({
+    name: s.title,
+    description: s.description,
+    price: s.pricing.replace("Starting at ", "").replace("/mo", ""),
+  }));
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(serviceSchemaData),
+      generateFAQSchema(faqs),
+      generateBreadcrumbSchema([
+        { name: "Home", url: "https://haidertech.com" },
+        { name: "Services", url: "https://haidertech.com/services" },
+      ]),
+    ],
+  };
+
   return (
     <Layout>
+      <SEO
+        title="Services"
+        description="Comprehensive tech services including web development, mobile apps, UI/UX design, cloud solutions, AI integration, and consulting. Get a free quote today."
+        keywords="web development services, mobile app development, UI/UX design services, cloud solutions, AI integration, tech consulting, software development"
+        url="https://haidertech.com/services"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 gradient-glow opacity-50" />

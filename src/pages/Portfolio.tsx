@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const categories = ["All", "Web Development", "Mobile App", "UI/UX Design", "AI Integration"];
 
@@ -98,8 +100,20 @@ const Portfolio = () => {
     ? projects
     : projects.filter((p) => p.category === activeCategory);
 
+  const structuredData = generateBreadcrumbSchema([
+    { name: "Home", url: "https://haidertech.com" },
+    { name: "Portfolio", url: "https://haidertech.com/portfolio" },
+  ]);
+
   return (
     <Layout>
+      <SEO
+        title="Portfolio"
+        description="Explore our portfolio of successful projects including e-commerce platforms, mobile apps, SaaS dashboards, and AI solutions. See how we've helped businesses grow."
+        keywords="web development portfolio, mobile app projects, UI/UX design examples, case studies, software development projects, tech portfolio"
+        url="https://haidertech.com/portfolio"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 gradient-glow opacity-50" />

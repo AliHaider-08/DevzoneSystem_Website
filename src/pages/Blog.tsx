@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const categories = ["All", "Web Development", "Mobile", "AI & ML", "Design", "Business"];
 
@@ -83,8 +85,20 @@ const Blog = () => {
     return matchesCategory && matchesSearch;
   });
 
+  const structuredData = generateBreadcrumbSchema([
+    { name: "Home", url: "https://haidertech.com" },
+    { name: "Blog", url: "https://haidertech.com/blog" },
+  ]);
+
   return (
     <Layout>
+      <SEO
+        title="Blog"
+        description="Stay up to date with the latest in technology, design, and business growth. Read our articles on web development, mobile apps, AI, and digital transformation."
+        keywords="tech blog, web development articles, mobile app development tips, AI insights, design systems, business growth, technology trends"
+        url="https://haidertech.com/blog"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 gradient-glow opacity-50" />
