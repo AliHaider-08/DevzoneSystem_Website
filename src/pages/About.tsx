@@ -9,55 +9,48 @@ import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/lib/stru
 
 const team = [
   {
-    name: "Alex Haider",
-    role: "Founder & CEO",
+    name: "Haider Ali",
+    role: "Founder & Lead Developer",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
-    bio: "10+ years in tech leadership. Previously led engineering at Fortune 500 companies.",
+    bio: "Expert in React, Node.js, MongoDB, and AWS. Passionate about building innovative software solutions.",
     social: { linkedin: "#", twitter: "#", github: "#" },
   },
   {
-    name: "Sarah Chen",
-    role: "CTO",
+    name: "Sarah Johnson",
+    role: "UI/UX Designer",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop",
-    bio: "Full-stack architect with expertise in scalable systems and AI integration.",
-    social: { linkedin: "#", twitter: "#", github: "#" },
+    bio: "Specialist in Figma, Adobe XD, CSS, and JavaScript. Creating beautiful, user-centric experiences.",
+    social: { linkedin: "#", twitter: "#" },
   },
   {
-    name: "Michael Rodriguez",
-    role: "Lead Designer",
+    name: "Mike Chen",
+    role: "Backend Engineer",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop",
-    bio: "Award-winning designer passionate about creating beautiful, user-centric experiences.",
-    social: { linkedin: "#", twitter: "#" },
-  },
-  {
-    name: "Emily Johnson",
-    role: "Project Manager",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop",
-    bio: "PMP certified with experience delivering complex projects on time and budget.",
-    social: { linkedin: "#", twitter: "#" },
+    bio: "Expert in Python, PostgreSQL, Docker, and Kubernetes. Building scalable backend systems.",
+    social: { linkedin: "#", github: "#" },
   },
 ];
 
 const values = [
+  {
+    icon: Heart,
+    title: "Integrity",
+    description: "We build trust through honest communication and transparent practices in everything we do.",
+  },
   {
     icon: Target,
     title: "Excellence",
     description: "We don't settle for good enough. Every project receives our best effort and attention to detail.",
   },
   {
-    icon: Heart,
-    title: "Client-First",
-    description: "Your success is our success. We build lasting partnerships based on trust and results.",
-  },
-  {
     icon: Lightbulb,
     title: "Innovation",
-    description: "We stay ahead of the curve, constantly learning and applying the latest technologies.",
+    description: "Shaping the future of technology by creating unprecedented opportunities for innovation.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "We believe great things happen when talented people work together toward a common goal.",
+    title: "Client Success",
+    description: "Your success is our success. We're dedicated to helping businesses thrive through technology.",
   },
 ];
 
@@ -146,13 +139,13 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  HaiderTech was founded in 2019 with a simple mission: make cutting-edge technology accessible to businesses of all sizes. What started as a small team in a garage has grown into a full-service tech company serving clients worldwide.
+                  <strong>Our Mission:</strong> Empowering businesses through innovative software solutions that drive growth and efficiency. We believe technology should be accessible to businesses of all sizes.
                 </p>
                 <p>
-                  Our journey has been defined by our commitment to excellence and our passion for solving complex problems. We've helped over 50 businesses transform their digital presence, from startups launching their first product to enterprises modernizing their tech stack.
+                  <strong>Our Vision:</strong> Shaping the future of technology by creating unprecedented opportunities for innovation. We've helped over 30 happy clients transform their digital presence with 100% satisfaction.
                 </p>
                 <p>
-                  Today, we're proud to be recognized as a leading technology partner, known for delivering solutions that drive real business results.
+                  With 5+ years of experience and 50+ projects delivered, we're proud to be a trusted technology partner for startups and enterprises alike.
                 </p>
               </div>
             </motion.div>
@@ -171,19 +164,19 @@ const About = () => {
                 </div>
                 <div className="bg-card rounded-xl p-6 border border-border/50">
                   <Users className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="text-3xl font-bold">50+</h3>
+                  <h3 className="text-3xl font-bold">30+</h3>
                   <p className="text-muted-foreground text-sm">Happy Clients</p>
                 </div>
               </div>
               <div className="space-y-4 mt-8">
                 <div className="bg-card rounded-xl p-6 border border-border/50">
                   <Rocket className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="text-3xl font-bold">150+</h3>
+                  <h3 className="text-3xl font-bold">50+</h3>
                   <p className="text-muted-foreground text-sm">Projects Delivered</p>
                 </div>
                 <div className="bg-card rounded-xl p-6 border border-border/50">
                   <Target className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="text-3xl font-bold">99%</h3>
+                  <h3 className="text-3xl font-bold">100%</h3>
                   <p className="text-muted-foreground text-sm">Client Satisfaction</p>
                 </div>
               </div>

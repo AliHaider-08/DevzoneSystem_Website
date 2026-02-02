@@ -104,19 +104,19 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Mail className="h-5 w-5 text-primary" />
-                  <a href="mailto:hello@haidertech.com" className="hover:text-primary transition-colors">
-                    hello@haidertech.com
+                  <a href="mailto:info@haidertech.com" className="hover:text-primary transition-colors">
+                    info@haidertech.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Phone className="h-5 w-5 text-primary" />
-                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                    +1 (234) 567-890
+                  <a href="tel:+15551234567" className="hover:text-primary transition-colors">
+                    +1 (555) 123-4567
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-sm text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary shrink-0" />
-                  <span>123 Tech Street, Silicon Valley, CA 94000</span>
+                  <span>Tech Hub, Silicon Valley, CA 94025</span>
                 </li>
               </ul>
             </div>
