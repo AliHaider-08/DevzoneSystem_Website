@@ -19,7 +19,7 @@ const HeroSection = () => {
           <source src={heroVideo} type="video/mp4" />
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-transparent" />
+        <div className="absolute inset-0 bg-background/80 dark:bg-background/85" />
       </div>
       
       {/* Background Elements */}
