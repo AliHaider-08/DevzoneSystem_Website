@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { generateLocalBusinessSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 
 const contactInfo = [
   {
@@ -84,8 +86,26 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateLocalBusinessSchema(),
+      generateBreadcrumbSchema([
+        { name: "Home", url: "https://haidertech.com" },
+        { name: "Contact", url: "https://haidertech.com/contact" },
+      ]),
+    ],
+  };
+
   return (
     <Layout>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with HaiderTech for a free consultation. We're here to help with web development, mobile apps, UI/UX design, and all your tech needs."
+        keywords="contact HaiderTech, get a quote, tech consultation, web development inquiry, software development contact"
+        url="https://haidertech.com/contact"
+        structuredData={structuredData}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 gradient-glow opacity-50" />
