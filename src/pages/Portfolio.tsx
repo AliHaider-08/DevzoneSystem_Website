@@ -147,13 +147,13 @@ const Portfolio = () => {
       </section>
 
       {/* Filter */}
-      <section className="pb-10">
+      <section className="py-10">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-2"
+            className="flex flex-wrap justify-center gap-3"
           >
             {categories.map((category) => (
               <Button
