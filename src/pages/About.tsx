@@ -6,26 +6,29 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/lib/structured-data";
+import teamHaider from "@/assets/team-haider.jpg";
+import teamSarah from "@/assets/team-sarah.jpg";
+import teamMike from "@/assets/team-mike.jpg";
 
 const team = [
   {
     name: "Haider Ali",
     role: "Founder & Lead Developer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
+    image: teamHaider,
     bio: "Expert in React, Node.js, MongoDB, and AWS. Passionate about building innovative software solutions.",
     social: { linkedin: "#", twitter: "#", github: "#" },
   },
   {
     name: "Sarah Johnson",
     role: "UI/UX Designer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop",
+    image: teamSarah,
     bio: "Specialist in Figma, Adobe XD, CSS, and JavaScript. Creating beautiful, user-centric experiences.",
     social: { linkedin: "#", twitter: "#" },
   },
   {
     name: "Mike Chen",
     role: "Backend Engineer",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop",
+    image: teamMike,
     bio: "Expert in Python, PostgreSQL, Docker, and Kubernetes. Building scalable backend systems.",
     social: { linkedin: "#", github: "#" },
   },
