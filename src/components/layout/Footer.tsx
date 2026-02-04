@@ -43,7 +43,7 @@ const Footer = () => {
                 <span className="text-primary-foreground font-bold text-xl">D</span>
               </div>
               <span className="font-bold text-xl">
-                Dev<span className="text-primary">Zone</span>
+                DevZone <span className="text-primary">System</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
