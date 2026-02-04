@@ -267,7 +267,7 @@ interface LoaderProps {
 const Loader = ({ onComplete }: LoaderProps) => {
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-background">
-      <div className="w-32 h-32 md:w-40 md:h-40">
+      <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
         <Lottie
           animationData={loaderAnimation}
           loop={true}
