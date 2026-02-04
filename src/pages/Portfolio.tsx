@@ -81,8 +81,8 @@ const Portfolio = () => {
     : projects.filter((p) => p.category === activeCategory);
 
   const structuredData = generateBreadcrumbSchema([
-    { name: "Home", url: "https://haidertech.com" },
-    { name: "Portfolio", url: "https://haidertech.com/portfolio" },
+    { name: "Home", url: "https://devzonesystem.com" },
+    { name: "Portfolio", url: "https://devzonesystem.com/portfolio" },
   ]);
 
   return (
@@ -91,7 +91,7 @@ const Portfolio = () => {
         title="Portfolio"
         description="Explore our portfolio of successful projects including e-commerce platforms, mobile apps, SaaS dashboards, and AI solutions. See how we've helped businesses grow."
         keywords="web development portfolio, mobile app projects, UI/UX design examples, case studies, software development projects, tech portfolio"
-        url="https://haidertech.com/portfolio"
+        url="https://devzonesystem.com/portfolio"
         structuredData={structuredData}
       />
       {/* Hero Section */}

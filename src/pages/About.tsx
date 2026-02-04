@@ -12,7 +12,7 @@ import teamMike from "@/assets/team-mike.jpg";
 
 const team = [
   {
-    name: "Haider Ali",
+    name: "Alex Morgan",
     role: "Founder & Lead Developer",
     image: teamHaider,
     bio: "Expert in React, Node.js, MongoDB, and AWS. Passionate about building innovative software solutions.",
@@ -78,8 +78,8 @@ const About = () => {
     "@graph": [
       generateOrganizationSchema(),
       generateBreadcrumbSchema([
-        { name: "Home", url: "https://haidertech.com" },
-        { name: "About", url: "https://haidertech.com/about" },
+        { name: "Home", url: "https://devzonesystem.com" },
+        { name: "About", url: "https://devzonesystem.com/about" },
       ]),
     ],
   };
@@ -88,9 +88,9 @@ const About = () => {
     <Layout>
       <SEO
         title="About Us"
-        description="Learn about HaiderTech's journey, our team of experts, company values, and the technologies we master. 5+ years of experience with 150+ projects delivered."
-        keywords="about HaiderTech, tech company, software development team, company values, tech stack, web development agency"
-        url="https://haidertech.com/about"
+        description="Learn about DevZone System's journey, our team of experts, company values, and the technologies we master. 5+ years of experience with 150+ projects delivered."
+        keywords="about DevZone System, tech company, software development team, company values, tech stack, web development agency"
+        url="https://devzonesystem.com/about"
         structuredData={structuredData}
       />
       {/* Hero Section */}

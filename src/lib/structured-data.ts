@@ -3,9 +3,9 @@
 export const generateOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "HaiderTech",
-  url: "https://haidertech.com",
-  logo: "https://haidertech.com/logo.png",
+  name: "DevZone System",
+  url: "https://devzonesystem.com",
+  logo: "https://devzonesystem.com/logo.png",
   description: "Empowering businesses through innovative software solutions that drive growth and efficiency.",
   address: {
     "@type": "PostalAddress",
@@ -19,23 +19,23 @@ export const generateOrganizationSchema = () => ({
     "@type": "ContactPoint",
     telephone: "+1-555-123-4567",
     contactType: "customer service",
-    email: "info@haidertech.com",
+    email: "info@devzonesystem.com",
   },
   sameAs: [
-    "https://twitter.com/haidertech",
-    "https://linkedin.com/company/haidertech",
-    "https://github.com/haidertech",
+    "https://twitter.com/devzonesystem",
+    "https://linkedin.com/company/devzonesystem",
+    "https://github.com/devzonesystem",
   ],
 });
 
 export const generateWebsiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "HaiderTech",
-  url: "https://haidertech.com",
+  name: "DevZone System",
+  url: "https://devzonesystem.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://haidertech.com/blog?search={search_term_string}",
+    target: "https://devzonesystem.com/blog?search={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 });
@@ -52,7 +52,7 @@ export const generateServiceSchema = (services: { name: string; description: str
       description: service.description,
       provider: {
         "@type": "Organization",
-        name: "HaiderTech",
+        name: "DevZone System",
       },
       offers: {
         "@type": "Offer",
@@ -94,10 +94,10 @@ export const generateArticleSchema = (article: {
   },
   publisher: {
     "@type": "Organization",
-    name: "HaiderTech",
+    name: "DevZone System",
     logo: {
       "@type": "ImageObject",
-      url: "https://haidertech.com/logo.png",
+      url: "https://devzonesystem.com/logo.png",
     },
   },
   datePublished: article.publishedDate,
@@ -124,10 +124,10 @@ export const generateFAQSchema = (faqs: { question: string; answer: string }[]) 
 export const generateLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "HaiderTech",
-  image: "https://haidertech.com/logo.png",
-  "@id": "https://haidertech.com",
-  url: "https://haidertech.com",
+  name: "DevZone System",
+  image: "https://devzonesystem.com/logo.png",
+  "@id": "https://devzonesystem.com",
+  url: "https://devzonesystem.com",
   telephone: "+1-555-123-4567",
   priceRange: "$$$",
   address: {
@@ -147,8 +147,8 @@ export const generateLocalBusinessSchema = () => ({
     },
   ],
   sameAs: [
-    "https://twitter.com/haidertech",
-    "https://linkedin.com/company/haidertech",
-    "https://github.com/haidertech",
+    "https://twitter.com/devzonesystem",
+    "https://linkedin.com/company/devzonesystem",
+    "https://github.com/devzonesystem",
   ],
 });

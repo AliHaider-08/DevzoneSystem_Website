@@ -64,10 +64,10 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-xl">H</span>
+            <span className="text-primary-foreground font-bold text-xl">D</span>
           </div>
           <span className="font-bold text-xl">
-            Haider<span className="text-primary">Tech</span>
+            Dev<span className="text-primary">Zone</span>
           </span>
         </Link>
 

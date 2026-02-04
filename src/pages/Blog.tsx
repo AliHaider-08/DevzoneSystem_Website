@@ -18,7 +18,7 @@ const blogPosts = [
     excerpt: "Explore the latest trends shaping web development, from AI-powered tools to edge computing and beyond.",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=500&fit=crop",
     category: "Web Development",
-    author: "Alex Haider",
+    author: "Alex Morgan",
     date: "Jan 15, 2024",
     readTime: "5 min read",
   },
@@ -38,7 +38,7 @@ const blogPosts = [
     excerpt: "Discover how to leverage artificial intelligence to automate processes and drive business growth.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
     category: "AI & ML",
-    author: "Alex Haider",
+    author: "Alex Morgan",
     date: "Jan 5, 2024",
     readTime: "8 min read",
   },
@@ -86,8 +86,8 @@ const Blog = () => {
   });
 
   const structuredData = generateBreadcrumbSchema([
-    { name: "Home", url: "https://haidertech.com" },
-    { name: "Blog", url: "https://haidertech.com/blog" },
+    { name: "Home", url: "https://devzonesystem.com" },
+    { name: "Blog", url: "https://devzonesystem.com/blog" },
   ]);
 
   return (
@@ -96,7 +96,7 @@ const Blog = () => {
         title="Blog"
         description="Stay up to date with the latest in technology, design, and business growth. Read our articles on web development, mobile apps, AI, and digital transformation."
         keywords="tech blog, web development articles, mobile app development tips, AI insights, design systems, business growth, technology trends"
-        url="https://haidertech.com/blog"
+        url="https://devzonesystem.com/blog"
         structuredData={structuredData}
       />
       {/* Hero Section */}

@@ -77,8 +77,8 @@ const Careers = () => {
   return (
     <Layout>
       <SEO
-        title="Careers | HaiderTech"
-        description="Join the HaiderTech team. We're hiring talented developers and designers to build innovative software solutions."
+        title="Careers | DevZone System"
+        description="Join the DevZone System team. We're hiring talented developers and designers to build innovative software solutions."
       />
 
       {/* Hero Section */}

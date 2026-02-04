@@ -23,7 +23,7 @@ const Index = () => {
         title="Digital Solutions & Web Development Agency"
         description="Transform your ideas into powerful digital solutions. We specialize in web development, mobile apps, UI/UX design, cloud solutions, and AI integration. 150+ projects delivered with 99% client satisfaction."
         keywords="web development agency, mobile app development, UI/UX design, cloud solutions, AI integration, tech consulting, digital transformation, software development company"
-        url="https://haidertech.com"
+        url="https://devzonesystem.com"
         structuredData={structuredData}
       />
       <HeroSection />

@@ -112,8 +112,8 @@ const Services = () => {
       generateServiceSchema(serviceSchemaData),
       generateFAQSchema(faqs),
       generateBreadcrumbSchema([
-        { name: "Home", url: "https://haidertech.com" },
-        { name: "Services", url: "https://haidertech.com/services" },
+        { name: "Home", url: "https://devzonesystem.com" },
+        { name: "Services", url: "https://devzonesystem.com/services" },
       ]),
     ],
   };
@@ -124,7 +124,7 @@ const Services = () => {
         title="Services"
         description="Comprehensive tech services including web development, mobile apps, UI/UX design, cloud solutions, AI integration, and consulting. Get a free quote today."
         keywords="web development services, mobile app development, UI/UX design services, cloud solutions, AI integration, tech consulting, software development"
-        url="https://haidertech.com/services"
+        url="https://devzonesystem.com/services"
         structuredData={structuredData}
       />
       {/* Hero Section */}

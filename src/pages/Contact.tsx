@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "info@haidertech.com",
-    link: "mailto:info@haidertech.com",
+    content: "info@devzonesystem.com",
+    link: "mailto:info@devzonesystem.com",
   },
   {
     icon: Phone,
@@ -91,8 +91,8 @@ const Contact = () => {
     "@graph": [
       generateLocalBusinessSchema(),
       generateBreadcrumbSchema([
-        { name: "Home", url: "https://haidertech.com" },
-        { name: "Contact", url: "https://haidertech.com/contact" },
+        { name: "Home", url: "https://devzonesystem.com" },
+        { name: "Contact", url: "https://devzonesystem.com/contact" },
       ]),
     ],
   };
@@ -101,9 +101,9 @@ const Contact = () => {
     <Layout>
       <SEO
         title="Contact Us"
-        description="Get in touch with HaiderTech for a free consultation. We're here to help with web development, mobile apps, UI/UX design, and all your tech needs."
-        keywords="contact HaiderTech, get a quote, tech consultation, web development inquiry, software development contact"
-        url="https://haidertech.com/contact"
+        description="Get in touch with DevZone System for a free consultation. We're here to help with web development, mobile apps, UI/UX design, and all your tech needs."
+        keywords="contact DevZone System, get a quote, tech consultation, web development inquiry, software development contact"
+        url="https://devzonesystem.com/contact"
         structuredData={structuredData}
       />
       {/* Hero Section */}
