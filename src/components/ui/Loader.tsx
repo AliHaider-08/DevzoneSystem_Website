@@ -266,7 +266,7 @@ interface LoaderProps {
 
 const Loader = ({ onComplete }: LoaderProps) => {
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-background">
+    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background">
       <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
         <Lottie
           animationData={loaderAnimation}
@@ -274,6 +274,9 @@ const Loader = ({ onComplete }: LoaderProps) => {
           autoplay={true}
           onComplete={onComplete}
         />
+      </div>
+      <div className="mt-4 text-2xl md:text-3xl font-bold">
+        DevZone <span className="text-primary">System</span>
       </div>
     </div>
   );
