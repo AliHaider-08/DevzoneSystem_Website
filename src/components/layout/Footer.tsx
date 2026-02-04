@@ -40,10 +40,10 @@ const Footer = () => {
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">H</span>
+                <span className="text-primary-foreground font-bold text-xl">D</span>
               </div>
               <span className="font-bold text-xl">
-                Haider<span className="text-primary">Tech</span>
+                Dev<span className="text-primary">Zone</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -104,8 +104,8 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Mail className="h-5 w-5 text-primary" />
-                  <a href="mailto:info@haidertech.com" className="hover:text-primary transition-colors">
-                    info@haidertech.com
+                  <a href="mailto:info@devzonesystem.com" className="hover:text-primary transition-colors">
+                    info@devzonesystem.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
@@ -142,7 +142,7 @@ const Footer = () => {
       <div className="border-t border-border">
         <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} HaiderTech. All rights reserved.
+            © {currentYear} DevZone System. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">

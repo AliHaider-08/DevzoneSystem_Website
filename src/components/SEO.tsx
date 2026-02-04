@@ -18,10 +18,10 @@ interface SEOProps {
 }
 
 const defaultMeta = {
-  title: "HaiderTech - Digital Solutions & Web Development Agency",
+  title: "DevZone System - Digital Solutions & Web Development Agency",
   description: "Transform your ideas into powerful digital solutions. We specialize in web development, mobile apps, UI/UX design, cloud solutions, and AI integration.",
-  image: "https://haidertech.com/og-image.png",
-  url: "https://haidertech.com",
+  image: "https://devzonesystem.com/og-image.png",
+  url: "https://devzonesystem.com",
   keywords: "web development, mobile app development, UI/UX design, cloud solutions, AI integration, tech consulting, digital agency",
 };
 
@@ -36,7 +36,7 @@ const SEO = ({
   structuredData,
 }: SEOProps) => {
   const fullTitle = title 
-    ? `${title} | HaiderTech` 
+    ? `${title} | DevZone System` 
     : defaultMeta.title;
 
   return (
@@ -54,7 +54,7 @@ const SEO = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="HaiderTech" />
+      <meta property="og:site_name" content="DevZone System" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
