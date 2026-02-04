@@ -8,7 +8,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "CEO, TechStart Inc.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
-    content: "HaiderTech transformed our outdated website into a modern, high-converting platform. Our online sales increased by 150% within three months!",
+    content: "DevZone System transformed our outdated website into a modern, high-converting platform. Our online sales increased by 150% within three months!",
     rating: 5,
   },
   {
@@ -76,15 +76,15 @@ const TestimonialsSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full bg-card border-border/50 hover:shadow-lg transition-all duration-300">
+              <Card className="h-full bg-card border-border/50 hover:shadow-lg hover:border-accent/30 transition-all duration-300 group">
                 <CardContent className="p-6">
                   {/* Quote Icon */}
-                  <Quote className="h-10 w-10 text-primary/20 mb-4" />
+                  <Quote className="h-10 w-10 text-accent/30 mb-4 group-hover:text-accent/50 transition-colors" />
 
                   {/* Rating */}
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                      <Star key={i} className="h-4 w-4 fill-accent text-accent" />
                     ))}
                   </div>
 

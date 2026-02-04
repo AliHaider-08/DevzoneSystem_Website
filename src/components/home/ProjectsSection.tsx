@@ -89,7 +89,7 @@ const ProjectsSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="group overflow-hidden bg-card border-border/50 hover:border-primary/30 transition-all duration-300">
+              <Card className="group overflow-hidden bg-card border-border/50 hover:border-accent/50 transition-all duration-300">
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
@@ -98,20 +98,20 @@ const ProjectsSection = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="icon" variant="secondary" className="rounded-full">
+                    <Button size="icon" variant="secondary" className="rounded-full hover:bg-accent hover:text-accent-foreground">
                       <ExternalLink className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <span className="text-primary text-sm font-medium">{project.category}</span>
-                  <h3 className="text-xl font-semibold mt-2 mb-3">{project.title}</h3>
+                  <span className="text-accent text-sm font-medium">{project.category}</span>
+                  <h3 className="text-xl font-semibold mt-2 mb-3 group-hover:text-accent transition-colors">{project.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs font-medium bg-muted rounded-full text-muted-foreground"
+                        className="px-3 py-1 text-xs font-medium bg-muted rounded-full text-muted-foreground group-hover:bg-accent/10 group-hover:text-accent transition-colors"
                       >
                         {tech}
                       </span>
