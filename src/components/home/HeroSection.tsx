@@ -96,9 +96,9 @@ const HeroSection = () => {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                className="w-14 h-14 rounded-xl bg-card border border-border flex items-center justify-center shadow-sm hover:shadow-glow hover:border-primary/50 transition-all cursor-pointer"
+                className="w-14 h-14 rounded-xl bg-card border border-border flex items-center justify-center shadow-sm hover:shadow-glow hover:border-accent hover:bg-accent/10 transition-all duration-200 cursor-pointer group"
               >
-                <Icon className="h-6 w-6 text-muted-foreground" />
+                <Icon className="h-6 w-6 text-muted-foreground group-hover:text-accent transition-colors" />
               </motion.div>
             ))}
           </motion.div>

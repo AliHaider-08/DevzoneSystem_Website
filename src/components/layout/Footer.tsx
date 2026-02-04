@@ -55,7 +55,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
+                  className="w-10 h-10 rounded-lg bg-muted hover:bg-accent hover:text-accent-foreground flex items-center justify-center transition-all duration-200 hover:scale-105"
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-muted-foreground hover:text-accent transition-all duration-200 text-sm hover:translate-x-1 inline-block"
                   >
                     {link.name}
                   </Link>
@@ -88,7 +88,7 @@ const Footer = () => {
                 <li key={service}>
                   <Link
                     to="/services"
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-muted-foreground hover:text-accent transition-all duration-200 text-sm hover:translate-x-1 inline-block"
                   >
                     {service}
                   </Link>
@@ -103,19 +103,19 @@ const Footer = () => {
               <h3 className="font-semibold text-lg mb-6">Contact Us</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <a href="mailto:info@devzonesystem.com" className="hover:text-primary transition-colors">
+                  <Mail className="h-5 w-5 text-accent" />
+                  <a href="mailto:info@devzonesystem.com" className="hover:text-accent transition-all duration-200">
                     info@devzonesystem.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <a href="tel:+15551234567" className="hover:text-primary transition-colors">
+                  <Phone className="h-5 w-5 text-accent" />
+                  <a href="tel:+15551234567" className="hover:text-accent transition-all duration-200">
                     +1 (555) 123-4567
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                  <MapPin className="h-5 w-5 text-primary shrink-0" />
+                  <MapPin className="h-5 w-5 text-accent shrink-0" />
                   <span>Tech Hub, Silicon Valley, CA 94025</span>
                 </li>
               </ul>
@@ -145,10 +145,10 @@ const Footer = () => {
             © {currentYear} DevZone System. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/privacy" className="text-sm text-muted-foreground hover:text-accent transition-all duration-200">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/terms" className="text-sm text-muted-foreground hover:text-accent transition-all duration-200">
               Terms of Service
             </Link>
           </div>

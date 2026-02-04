@@ -77,10 +77,10 @@ const Header = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 location.pathname === link.path
-                  ? "bg-primary/10 text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  ? "bg-accent/15 text-accent"
+                  : "text-muted-foreground hover:text-accent hover:bg-accent/10"
               }`}
             >
               {link.name}
@@ -130,10 +130,10 @@ const Header = () => {
                   key={link.path}
                   to={link.path}
                   onClick={closeMobileMenu}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                     location.pathname === link.path
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                      ? "bg-accent/15 text-accent"
+                      : "text-muted-foreground hover:text-accent hover:bg-accent/10"
                   }`}
                 >
                   {link.name}
