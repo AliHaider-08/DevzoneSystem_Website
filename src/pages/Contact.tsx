@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, MessageSquare } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -16,37 +16,94 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "info@devzonesystem.com",
-    link: "mailto:info@devzonesystem.com",
+    content: "devzonesystem@gmail.com",
+    link: "mailto:devzonesystem@gmail.com",
   },
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (555) 123-4567",
-    link: "tel:+15551234567",
+    content: "03250075364",
+    link: "tel:03250075364",
   },
   {
-    icon: MapPin,
-    title: "Visit Us",
-    content: "Tech Hub, Silicon Valley, California, CA 94025",
-    link: "#",
-  },
-  {
-    icon: Clock,
-    title: "Business Hours",
-    content: "Mon - Fri: 9:00 AM - 6:00 PM EST",
-    link: null,
+    icon: MessageSquare,
+    title: "WhatsApp",
+    content: "+92 325 0075364",
+    link: "https://wa.me/923250075364",
   },
 ];
 
-const services = [
-  "Web Development",
-  "Mobile App Development",
-  "UI/UX Design",
-  "Cloud Solutions",
-  "AI Integration",
-  "Tech Consulting",
-  "Other",
+const serviceCategories = [
+  {
+    category: "Web Development",
+    subcategories: [
+      "WordPress Development",
+      "MERN Stack Development",
+      "Next.js / React.js",
+      "PHP / Laravel",
+      "Shopify Development",
+      "E-commerce Solution",
+      "Portfolio Website",
+      "CMS Development",
+      "API Integration"
+    ]
+  },
+  {
+    category: "Flutter Development",
+    subcategories: [
+      "Android & iOS App",
+      "Flutter Web & Desktop",
+      "Firebase Integration",
+      "Payment Gateway Integration",
+      "Real-time Chat Apps",
+      "Google Maps Integration",
+      "App Maintenance & UI Fixes"
+    ]
+  },
+  {
+    category: "Artificial Intelligence",
+    subcategories: [
+      "AI Model Training",
+      "ChatGPT / LLM Integration",
+      "Custom AI Chatbots",
+      "Computer Vision",
+      "NLP (Natural Language Processing)",
+      "Data Science & Analytics",
+      "Web Scraping & Automation"
+    ]
+  },
+  {
+    category: "Cyber Security",
+    subcategories: [
+      "Penetration Testing (VAPT)",
+      "Web Application Security",
+      "Network Security Audit",
+      "Cloud Security",
+      "Malware Removal",
+      "Security Consulting"
+    ]
+  },
+  {
+    category: "Networking",
+    subcategories: [
+      "Server Management",
+      "Cloud Infrastructure (AWS/GCP)",
+      "VPN & Firewall Configuration",
+      "Load Balancing Setup",
+      "Network Troubleshooting"
+    ]
+  },
+  {
+    category: "UI/UX Design",
+    subcategories: [
+      "Mobile App UI/UX",
+      "Website UI/UX Design",
+      "Wireframing & Prototyping",
+      "Logo & Brand Identity",
+      "Social Media Graphics",
+      "Illustrations & Icons"
+    ]
+  }
 ];
 
 const Contact = () => {
@@ -57,7 +114,8 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    service: "",
+    category: "",
+    subcategory: "",
     message: "",
   });
 
@@ -65,21 +123,50 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/devzonesystem@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          category: formData.category,
+          subcategory: formData.subcategory,
+          message: formData.message,
+          _subject: `New Contact Inquiry from ${formData.name}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast({
+          title: "Message Sent!",
+          description: "We've received your inquiry and will get back to you within 24 hours.",
+        });
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    }, 3000);
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: "", email: "", phone: "", category: "", subcategory: "", message: "" });
+        }, 5000);
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or contact us directly at devzonesystem@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -107,7 +194,7 @@ const Contact = () => {
         structuredData={structuredData}
       />
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
+      <section className="pt-16 pb-0 relative overflow-hidden">
         <div className="absolute inset-0 gradient-glow opacity-50" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -139,7 +226,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="pt-8 pb-32">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
@@ -151,7 +238,7 @@ const Contact = () => {
                 className="space-y-6"
               >
                 <h2 className="text-2xl font-bold mb-8">Get in Touch</h2>
-                
+
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={info.title}
@@ -183,27 +270,7 @@ const Contact = () => {
                   </motion.div>
                 ))}
 
-                {/* Map Placeholder */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                  className="mt-8"
-                >
-                  <div className="w-full h-48 rounded-xl bg-muted overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101268.63286965809!2d-122.10795949999999!3d37.3936383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1704000000000!5m2!1sen!2s"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Office Location"
-                    />
-                  </div>
-                </motion.div>
+
               </motion.div>
             </div>
 
@@ -265,21 +332,46 @@ const Contact = () => {
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="service">Service Interested In *</Label>
+                          <Label htmlFor="category">Category *</Label>
                           <Select
-                            value={formData.service}
-                            onValueChange={(value) => setFormData({ ...formData, service: value })}
+                            value={formData.category}
+                            onValueChange={(value) => setFormData({ ...formData, category: value, subcategory: "" })}
                             required
                           >
                             <SelectTrigger>
-                              <SelectValue placeholder="Select a service" />
+                              <SelectValue placeholder="Select Category" />
                             </SelectTrigger>
                             <SelectContent>
-                              {services.map((service) => (
-                                <SelectItem key={service} value={service}>
-                                  {service}
+                              {serviceCategories.map((cat) => (
+                                <SelectItem key={cat.category} value={cat.category}>
+                                  {cat.category}
                                 </SelectItem>
                               ))}
+                            </SelectContent>
+                          </Select>
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <Label htmlFor="subcategory">Specific Service *</Label>
+                          <Select
+                            value={formData.subcategory}
+                            onValueChange={(value) => setFormData({ ...formData, subcategory: value })}
+                            required
+                            disabled={!formData.category}
+                          >
+                            <SelectTrigger>
+                              <SelectValue placeholder={formData.category ? "Select Service" : "Choose a category first"} />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {formData.category &&
+                                serviceCategories.find(c => c.category === formData.category)?.subcategories.map((sub) => (
+                                  <SelectItem key={sub} value={sub}>
+                                    {sub}
+                                  </SelectItem>
+                                ))
+                              }
                             </SelectContent>
                           </Select>
                         </div>

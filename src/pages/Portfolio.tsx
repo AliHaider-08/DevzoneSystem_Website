@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight, Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
@@ -75,10 +76,15 @@ const projects = [
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProjects = activeCategory === "All"
-    ? projects
-    : projects.filter((p) => p.category === activeCategory);
+  const filteredProjects = projects.filter((project) => {
+    const matchesCategory = activeCategory === "All" || project.category === activeCategory;
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.technologies.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
   const structuredData = generateBreadcrumbSchema([
     { name: "Home", url: "https://devzonesystem.com" },
@@ -126,26 +132,47 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Filter */}
+      {/* Filter & Search */}
       <section className="py-10">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-3"
-          >
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={activeCategory === category ? "default" : "outline"}
-                onClick={() => setActiveCategory(category)}
-                className={activeCategory === category ? "gradient-primary border-0" : ""}
-              >
-                {category}
-              </Button>
-            ))}
-          </motion.div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-card/30 p-4 rounded-2xl border border-border/50 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-wrap justify-center md:justify-start gap-2"
+            >
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={activeCategory === category ? "default" : "outline"}
+                  onClick={() => setActiveCategory(category)}
+                  className={`h-10 rounded-full px-6 transition-all ${activeCategory === category
+                      ? "gradient-primary border-0 shadow-lg shadow-primary/20"
+                      : "hover:bg-primary/10 hover:text-primary border-border/50"
+                    }`}
+                >
+                  {category}
+                </Button>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+              className="relative w-full md:w-80"
+            >
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Search projects or tools..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 h-11 bg-muted/50 border-none rounded-xl focus-visible:ring-primary/30"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

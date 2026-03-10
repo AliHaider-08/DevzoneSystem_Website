@@ -19,7 +19,7 @@ export const generateOrganizationSchema = () => ({
     "@type": "ContactPoint",
     telephone: "+1-555-123-4567",
     contactType: "customer service",
-    email: "info@devzonesystem.com",
+    email: "devzonesystem@gmail.com",
   },
   sameAs: [
     "https://twitter.com/devzonesystem",
@@ -40,7 +40,7 @@ export const generateWebsiteSchema = () => ({
   },
 });
 
-export const generateServiceSchema = (services: { name: string; description: string; price: string }[]) => ({
+export const generateServiceSchema = (services: { name: string; description: string; price?: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "ItemList",
   itemListElement: services.map((service, index) => ({
@@ -56,7 +56,7 @@ export const generateServiceSchema = (services: { name: string; description: str
       },
       offers: {
         "@type": "Offer",
-        price: service.price,
+        price: service.price || "Contact for pricing",
         priceCurrency: "USD",
       },
     },

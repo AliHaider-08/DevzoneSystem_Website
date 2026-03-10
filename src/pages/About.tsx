@@ -1,35 +1,59 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Target, Heart, Lightbulb, Users, Award, Rocket, Linkedin, Twitter, Github } from "lucide-react";
+import { ArrowRight, Target, Heart, Lightbulb, Users, Award, Rocket, Linkedin, Github, Search, PenTool, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/lib/structured-data";
-import teamHaider from "@/assets/team-haider.jpg";
-import teamSarah from "@/assets/team-sarah.jpg";
-import teamMike from "@/assets/team-mike.jpg";
+import teamHammad from "@/assets/Hammad.jpeg";
+import teamAli from "@/assets/AliPic.jpeg";
+import teamIhtisham from "@/assets/Ihtisham.jpeg";
+import teamOsama from "@/assets/Osama.jpeg";
+import teamUmair from "@/assets/umair.jpeg";
+import teamMoeen from "@/assets/Moeen.jpeg";
 
 const team = [
   {
-    name: "Alex Morgan",
-    role: "Founder & Lead Developer",
-    image: teamHaider,
-    bio: "Expert in React, Node.js, MongoDB, and AWS. Passionate about building innovative software solutions.",
-    social: { linkedin: "#", twitter: "#", github: "#" },
+    name: "Ali Haider",
+    role: "Founder & Full Stack Developer",
+    image: teamAli,
+    bio: "Visionary leader and expert in modern web technologies. Building robust and scalable applications.",
+    social: { linkedin: "#", github: "#" },
   },
   {
-    name: "Sarah Johnson",
-    role: "UI/UX Designer",
-    image: teamSarah,
-    bio: "Specialist in Figma, Adobe XD, CSS, and JavaScript. Creating beautiful, user-centric experiences.",
-    social: { linkedin: "#", twitter: "#" },
+    name: "Abdul Muin Qureshi",
+    role: "Lead Software Developer",
+    image: teamMoeen,
+    bio: "Expert in leading development teams and architecting scalable software solutions. Passionate about clean code and best practices.",
+    social: { linkedin: "https://www.linkedin.com/company/devzone-system/", github: "#" },
   },
   {
-    name: "Mike Chen",
-    role: "Backend Engineer",
-    image: teamMike,
-    bio: "Expert in Python, PostgreSQL, Docker, and Kubernetes. Building scalable backend systems.",
+    name: "Hammad Khan",
+    role: "Blockchain Developer",
+    image: teamHammad,
+    bio: "Expert in blockchain technologies, smart contracts, and decentralized applications. Building the future of Web3.",
+    social: { linkedin: "#", github: "#" },
+  },
+  {
+    name: "Ihtisham",
+    role: "WordPress Developer",
+    image: teamIhtisham,
+    bio: "Expert in crafting high-performance, SEO-optimized WordPress websites and custom themes with a focus on speed and user experience.",
+    social: { linkedin: "#", github: "#" },
+  },
+  {
+    name: "Osama",
+    role: "AI Engineer",
+    image: teamOsama,
+    bio: "Specialist in building intelligent systems, machine learning models, and cutting-edge AI integrations to solve complex problems.",
+    social: { linkedin: "#", github: "#" },
+  },
+  {
+    name: "Muhammad Umair",
+    role: "Data Scientist & AI Engineer",
+    image: teamUmair,
+    bio: "Specializing in data-driven solutions, predictive modeling, and advanced AI architectures to turn complex data into actionable insights.",
     social: { linkedin: "#", github: "#" },
   },
 ];
@@ -57,20 +81,30 @@ const values = [
   },
 ];
 
-const techStack = [
-  { name: "React", category: "Frontend" },
-  { name: "Next.js", category: "Frontend" },
-  { name: "TypeScript", category: "Frontend" },
-  { name: "Tailwind CSS", category: "Frontend" },
-  { name: "Node.js", category: "Backend" },
-  { name: "Python", category: "Backend" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "MongoDB", category: "Database" },
-  { name: "AWS", category: "Cloud" },
-  { name: "Docker", category: "DevOps" },
-  { name: "OpenAI", category: "AI" },
-  { name: "Figma", category: "Design" },
+const steps = [
+  {
+    icon: Search,
+    title: "Discovery",
+    description: "We start by diving deep into your business goals, user needs, and project requirements to build a solid foundation.",
+  },
+  {
+    icon: PenTool,
+    title: "Design",
+    description: "Our design team creates intuitive user interfaces and seamless experiences tailored to your brand identity.",
+  },
+  {
+    icon: Code2,
+    title: "Development",
+    description: "Our developers bring designs to life using cutting-edge technologies and best practices for scalable solutions.",
+  },
+  {
+    icon: Rocket,
+    title: "Launch",
+    description: "After rigorous testing, we deploy your project and provide ongoing support to ensure long-term success.",
+  },
 ];
+
+
 
 const About = () => {
   const structuredData = {
@@ -109,7 +143,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold mt-4 mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6"
             >
               Building the Future, <span className="text-gradient">One Line at a Time</span>
             </motion.h1>
@@ -157,46 +191,111 @@ const About = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 gap-6"
             >
-              <div className="space-y-4">
-                <div className="bg-card rounded-xl p-6 border border-border/50">
-                  <Award className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="text-3xl font-bold">5+</h3>
-                  <p className="text-muted-foreground text-sm">Years in Business</p>
-                </div>
-                <div className="bg-card rounded-xl p-6 border border-border/50">
-                  <Users className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="text-3xl font-bold">30+</h3>
-                  <p className="text-muted-foreground text-sm">Happy Clients</p>
-                </div>
+              <div className="space-y-6">
+                <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/40 transition-all duration-300 group">
+                  <CardContent className="p-6">
+                    <Award className="h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h3 className="text-4xl font-bold mb-1">5+</h3>
+                    <p className="text-muted-foreground text-sm font-medium">Years in Business</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/40 transition-all duration-300 group">
+                  <CardContent className="p-6">
+                    <Users className="h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h3 className="text-4xl font-bold mb-1">30+</h3>
+                    <p className="text-muted-foreground text-sm font-medium">Happy Clients</p>
+                  </CardContent>
+                </Card>
               </div>
-              <div className="space-y-4 mt-8">
-                <div className="bg-card rounded-xl p-6 border border-border/50">
-                  <Rocket className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="text-3xl font-bold">50+</h3>
-                  <p className="text-muted-foreground text-sm">Projects Delivered</p>
-                </div>
-                <div className="bg-card rounded-xl p-6 border border-border/50">
-                  <Target className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="text-3xl font-bold">100%</h3>
-                  <p className="text-muted-foreground text-sm">Client Satisfaction</p>
-                </div>
+              <div className="space-y-6">
+                <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/40 transition-all duration-300 group">
+                  <CardContent className="p-6">
+                    <Rocket className="h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h3 className="text-4xl font-bold mb-1">50+</h3>
+                    <p className="text-muted-foreground text-sm font-medium">Projects Delivered</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/40 transition-all duration-300 group">
+                  <CardContent className="p-6">
+                    <Target className="h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                    <h3 className="text-4xl font-bold mb-1">100%</h3>
+                    <p className="text-muted-foreground text-sm font-medium">Client Satisfaction</p>
+                  </CardContent>
+                </Card>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      {/* How We Work Section */}
+      <section className="py-24 bg-muted/30 relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-primary font-medium text-sm uppercase tracking-wider"
+              className="text-primary font-semibold text-sm uppercase tracking-widest"
+            >
+              Our Process
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-bold mt-4"
+            >
+              How We <span className="text-gradient">Bring Ideas to Life</span>
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative group"
+              >
+                {/* Connecting Line (Only for desktop) */}
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-[2px] bg-gradient-to-r from-primary/20 to-transparent z-0" />
+                )}
+
+                <Card className="h-full bg-card border-border/50 hover:border-primary/40 transition-all duration-500 relative z-10 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-1 h-0 bg-primary group-hover:h-full transition-all duration-500" />
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary transition-all duration-500">
+                      <step.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
+                    </div>
+                    <div className="text-primary/40 text-4xl font-bold mb-4">0{index + 1}</div>
+                    <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {step.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-primary font-semibold text-sm uppercase tracking-widest"
             >
               Our Values
             </motion.span>
@@ -205,7 +304,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-3xl md:text-4xl font-bold mt-4"
+              className="text-4xl md:text-5xl font-bold mt-4"
             >
               What <span className="text-gradient">Drives Us</span>
             </motion.h2>
@@ -219,14 +318,18 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="h-full"
               >
-                <Card className="h-full bg-card border-border/50 text-center">
-                  <CardContent className="p-6">
-                    <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mx-auto mb-6">
-                      <value.icon className="h-7 w-7 text-primary-foreground" />
+                <Card className="h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/40 transition-all duration-300 group hover:shadow-2xl hover:shadow-primary/10">
+                  <CardContent className="p-8 text-center">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
+                      <value.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground text-sm">{value.description}</p>
+                    <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -258,7 +361,7 @@ const About = () => {
             </motion.h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -267,32 +370,31 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full bg-card border-border/50 overflow-hidden group">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                <Card className="h-full bg-card border-border/50 overflow-hidden group hover:border-primary/30 transition-all duration-300">
+                  <div className="flex justify-center pt-8 overflow-hidden">
+                    <div className="w-44 h-44 rounded-2xl overflow-hidden border-2 border-primary/10 group-hover:border-primary/40 transition-all duration-500">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold">{member.name}</h3>
-                    <p className="text-primary text-sm mb-3">{member.role}</p>
-                    <p className="text-muted-foreground text-sm mb-4">{member.bio}</p>
-                    <div className="flex gap-2">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="text-lg font-bold tracking-tight">{member.name}</h3>
+                    <p className="text-primary text-xs font-semibold uppercase tracking-wider mb-3 leading-none mt-1">{member.role}</p>
+                    <p className="text-muted-foreground text-xs leading-relaxed mb-6 line-clamp-3">
+                      {member.bio}
+                    </p>
+                    <div className="flex justify-center gap-3">
                       {member.social.linkedin && (
-                        <a href={member.social.linkedin} className="w-8 h-8 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors">
-                          <Linkedin className="h-4 w-4" />
-                        </a>
-                      )}
-                      {member.social.twitter && (
-                        <a href={member.social.twitter} className="w-8 h-8 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors">
-                          <Twitter className="h-4 w-4" />
+                        <a href={member.social.linkedin} className="w-8 h-8 rounded-xl bg-muted/50 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 group/icon">
+                          <Linkedin className="h-3.5 w-3.5 group-hover/icon:scale-110 transition-transform" />
                         </a>
                       )}
                       {member.social.github && (
-                        <a href={member.social.github} className="w-8 h-8 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors">
-                          <Github className="h-4 w-4" />
+                        <a href={member.social.github} className="w-8 h-8 rounded-xl bg-muted/50 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 group/icon">
+                          <Github className="h-3.5 w-3.5 group-hover/icon:scale-110 transition-transform" />
                         </a>
                       )}
                     </div>
@@ -304,46 +406,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Tech Stack */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-primary font-medium text-sm uppercase tracking-wider"
-            >
-              Tech Stack
-            </motion.span>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl md:text-4xl font-bold mt-4"
-            >
-              Tools We <span className="text-gradient">Master</span>
-            </motion.h2>
-          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-3"
-          >
-            {techStack.map((tech) => (
-              <span
-                key={tech.name}
-                className="px-4 py-2 bg-card border border-border/50 rounded-lg text-sm font-medium hover:border-primary/50 hover:shadow-glow transition-all cursor-pointer"
-              >
-                {tech.name}
-              </span>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20">

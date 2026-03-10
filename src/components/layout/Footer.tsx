@@ -26,7 +26,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/devzone-system", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Instagram, href: "#", label: "Instagram" },
   ];
@@ -104,32 +104,28 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Mail className="h-5 w-5 text-accent" />
-                  <a href="mailto:info@devzonesystem.com" className="hover:text-accent transition-all duration-200">
-                    info@devzonesystem.com
+                  <a href="mailto:devzonesystem@gmail.com" className="hover:text-accent transition-all duration-200">
+                    devzonesystem@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Phone className="h-5 w-5 text-accent" />
-                  <a href="tel:+15551234567" className="hover:text-accent transition-all duration-200">
-                    +1 (555) 123-4567
+                  <a href="tel:03250075364" className="hover:text-accent transition-all duration-200">
+                    03250075364
                   </a>
-                </li>
-                <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                  <MapPin className="h-5 w-5 text-accent shrink-0" />
-                  <span>Tech Hub, Silicon Valley, CA 94025</span>
                 </li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-medium mb-3">Subscribe to Newsletter</h4>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-muted border-0"
+                  className="bg-muted border-0 h-10 px-4 focus-visible:ring-primary/30"
                 />
-                <Button className="gradient-primary border-0 shrink-0">
+                <Button className="gradient-primary border-0 shrink-0 h-10 px-6">
                   Subscribe
                 </Button>
               </div>
@@ -154,7 +150,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 
