@@ -6,6 +6,11 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import hireExpertImg from "@/assets/HireExpert.png";
+import desiDelightImg from "@/assets/DesiDelight.jpg";
+import noirEssenceImg from "@/assets/Noir Essence.jpg";
+import hospitalImg from "@/assets/Hospital.jpg";
+import eHealthcareImg from "@/assets/EHealthcare.png";
+import dashboardImg from "@/assets/Dashbaord.png";
 
 const projects = [
     {
@@ -16,7 +21,7 @@ const projects = [
         image: hireExpertImg,
         technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "AWS"],
         client: "Pakistan Software Export Board (PSEB)",
-        website: "https://hireexpert.gov.pk", // Placeholder
+        website: "https://hireexpert.gov.pk",
         duration: "6 Months",
         role: "Lead Development Partner",
         results: "National-scale freelance ecosystem",
@@ -29,22 +34,112 @@ const projects = [
             "Automated Milestone Tracking"
         ],
         challenge: "Creating a reliable, transparent, and scalable platform that could handle thousands of concurrent users while maintaining strict security standards for government-backed infrastructure.",
-        solution: "We implemented a highly scalable MERN stack architecture with multi-layer authentication and real-time state synchronization. Leveraging cloud native services ensured 99.9% uptime and robust performance."
+        solution: "We implemented a highly scalable MERN stack architecture with multi-layer authentication and real-time state synchronization."
     },
     {
         id: 1,
-        title: "E-Commerce Platform",
+        title: "Desi Delight",
         category: "Web Development",
-        description: "Full-featured e-commerce platform with real-time inventory management and secure payment processing.",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-        technologies: ["React", "Node.js", "MongoDB"],
-        client: "Retail Client",
-        results: "Real-time inventory & payments",
-        features: ["Inventory Management", "Payment Integration", "User Reviews"],
-        challenge: "Managing complex inventory systems.",
-        solution: "Used MongoDB for flexible data modeling."
+        description: "A premium restaurant website featuring an interactive menu, online reservations, and a vibrant showcase of traditional cuisine.",
+        image: desiDelightImg,
+        technologies: ["React", "Custom CSS", "Framer Motion"],
+        client: "Restaurant Client",
+        results: "Modern digital dining experience",
+        features: ["Interactive Menu", "Online Reservations", "Responsive Design", "Custom Animations"],
+        challenge: "Developing a visually appealing interface that captures the essence of traditional dining while maintaining modern performance standards.",
+        solution: "We used Framer Motion for smooth transitions and a custom CSS architecture to create a warm, inviting atmosphere."
     },
-    // Add other projects to match Portfolio.tsx...
+    {
+        id: 2,
+        title: "Noir Essence",
+        category: "Web Development",
+        description: "A luxury e-commerce experience for a premium perfume brand, featuring a sophisticated scent explorer and elegant product showcases.",
+        image: noirEssenceImg,
+        technologies: ["React.js", "Node.js", "Express.js"],
+        client: "Noir Essence Luxury",
+        results: "Premium brand transformation",
+        features: ["Sophisticated Scent Explorer", "Elegant Product Showcase", "Secure Checkout", "Inventory Management"],
+        challenge: "Capturing the luxury and 'essence' of a perfume brand through a digital interface that feels as high-end as the products themselves.",
+        solution: "We developed a custom React frontend with subtle parallax effects and a robust Node/Express backend to handle secure transactions and inventory."
+    },
+    {
+        id: 3,
+        title: "Hospital Management System",
+        category: "Web Development",
+        description: "A comprehensive digital healthcare solution for managing patient records, appointments, and medical staff workflows efficiently.",
+        image: hospitalImg,
+        technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
+        client: "Medical Center",
+        results: "Streamlined healthcare operations",
+        features: ["Patient Records Management", "Doctor Scheduling", "Appointment Booking", "Billing & Invoicing"],
+        challenge: "Designing a system that handles sensitive medical data while remaining intuitive for staff to use in high-pressure environments.",
+        solution: "We implemented a MERN stack application with strict role-based access control and a clean, focused dashboard for different staff roles."
+    },
+    {
+        id: 4,
+        title: "E-Healthcare",
+        category: "Web Development",
+        description: "A complete digital health platform including an online medicine ordering system, virtual consultations, and AI-powered symptom diagnosis.",
+        image: eHealthcareImg,
+        technologies: ["React.js", "Node.js", "Express.js", "Socket.io"],
+        client: "Healthcare Connect",
+        results: "Integrated pharmaceutical ecosystem",
+        features: ["Online Medicine Order System", "Online Consultation", "AI Chatbot System", "Secure Prescription Management"],
+        challenge: "Building a unified platform that seamlessly bridges the gap between pharmacists, doctors, and patients while ensuring real-time communication.",
+        solution: "We utilized Socket.io for real-time chat and consultations, and developed an intelligent chatbot system to assist users with preliminary symptom inquiries."
+    },
+    {
+        id: 5,
+        title: "SaaS Multi-Purpose Dashboard",
+        category: "Web Development",
+        description: "A versatile SaaS dashboard designed for comprehensive business management, featuring real-time analytics, user administration, and multi-tenant support.",
+        image: dashboardImg,
+        technologies: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
+        client: "SaaS Enterprise",
+        results: "Centralized business management",
+        features: ["Real-time Data Visualization", "Multi-tenant Architecture", "Role-based Access Control", "Automated Reporting", "Dark/Light Mode Support"],
+        challenge: "Creating a highly customizable and performant dashboard that can aggregate data from various sources and present it in an actionable format for different user roles.",
+        solution: "We implemented an modular architecture using React components and TypeScript, with a robust backend to handle complex data aggregation and multi-tenancy requirements."
+    },
+    {
+        id: 6,
+        title: "Financial Analytics Dashboard",
+        category: "UI/UX Design",
+        description: "Advanced data visualization and reporting dashboard for financial analytics.",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+        technologies: ["Angular", "D3.js", "Redis"],
+        client: "FinTech Corp",
+        results: "Advanced data visualization",
+        features: ["Real-time Charts", "Custom Reports", "Data Export"],
+        challenge: "Visualizing massive datasets in an intuitive way.",
+        solution: "Utilized D3.js for highly interactive visualizations."
+    },
+    {
+        id: 7,
+        title: "AI-Powered Smart Vending Machine",
+        category: "AI Integration",
+        description: "Developed an AI-powered vending machine using RAG to recommend protein supplements and vitamin products based on user context and preferences. Integrated multimodal inputs (face recognition, text, voice) and a structured nutrition database.",
+        image: "https://images.unsplash.com/photo-1585007600263-ad26c4800763?w=800&h=600&fit=crop",
+        technologies: ["RAG", "Multimodal AI", "LangChain", "Face Recognition", "Python"],
+        client: "Nutrition-Tech Client",
+        results: "Personalized health recommendations",
+        features: ["RAG-based Recommendation System", "Face Recognition Authentication", "Voice & Text Multimodal Input", "Structured Nutrition Database", "Context-Aware Interaction"],
+        challenge: "Integrating multiple input modalities while maintaining high accuracy in medical/nutrition advice based on dynamic user context.",
+        solution: "We implemented a custom RAG pipeline with LangChain for state management and used a high-accuracy multimodal processing layer for seamless user interaction."
+    },
+    {
+        id: 8,
+        title: "Podcast-AI-Agent-Development",
+        category: "AI Integration",
+        description: "Designed and deployed an LLM-based RAG system to process podcast transcripts, enabling content analysis, automated question generation, and advisory-style interactions aligned with the podcast’s brand voice.",
+        image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&h=600&fit=crop",
+        technologies: ["LangChain", "FAISS", "LLM Fine-tuning", "Python", "OpenAI"],
+        client: "Media Hub",
+        results: "Scalable content engagement",
+        features: ["Automated Question Generation", "Dynamic Content Analysis", "Brand-Voice Aligned Advisory", "Efficient FAISS Vector Search", "LLM-Powered Insights"],
+        challenge: "Maintaining a specific brand voice across thousands of transcript segments while ensuring factual consistency from the audio source.",
+        solution: "We fine-tuned an LLM on the podcast's unique conversational style and combined it with a RAG system and FAISS for rapid, relevant knowledge retrieval."
+    },
 ];
 
 const PortfolioDetail = () => {

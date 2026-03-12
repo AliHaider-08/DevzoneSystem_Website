@@ -7,11 +7,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { generateBreadcrumbSchema, generateOrganizationSchema } from "@/lib/structured-data";
 import teamHammad from "@/assets/Hammad.jpeg";
-import teamAli from "@/assets/AliPic.jpeg";
+import teamAli from "@/assets/AliPicc.jpeg";
 import teamIhtisham from "@/assets/Ihtisham.jpeg";
 import teamOsama from "@/assets/Osama.jpeg";
 import teamUmair from "@/assets/umair.jpeg";
 import teamMoeen from "@/assets/Moeen.jpeg";
+import teamHaris from "@/assets/Haris.jpeg";
+import teamHasan from "@/assets/Hasan.jpeg";
 
 const team = [
   {
@@ -29,6 +31,13 @@ const team = [
     social: { linkedin: "https://www.linkedin.com/company/devzone-system/", github: "#" },
   },
   {
+    name: "Osama Ali Shah",
+    role: "AI Engineer",
+    image: teamOsama,
+    bio: "Specialist in building intelligent systems, machine learning models, and cutting-edge AI integrations to solve complex problems.",
+    social: { linkedin: "#", github: "#" },
+  },
+  {
     name: "Hammad Khan",
     role: "Blockchain Developer",
     image: teamHammad,
@@ -43,17 +52,24 @@ const team = [
     social: { linkedin: "#", github: "#" },
   },
   {
-    name: "Osama",
-    role: "AI Engineer",
-    image: teamOsama,
-    bio: "Specialist in building intelligent systems, machine learning models, and cutting-edge AI integrations to solve complex problems.",
-    social: { linkedin: "#", github: "#" },
-  },
-  {
     name: "Muhammad Umair",
     role: "Data Scientist & AI Engineer",
     image: teamUmair,
     bio: "Specializing in data-driven solutions, predictive modeling, and advanced AI architectures to turn complex data into actionable insights.",
+    social: { linkedin: "#", github: "#" },
+  },
+  {
+    name: "Haris Yaseen",
+    role: "Mobile Application Developer",
+    image: teamHaris,
+    bio: "Expert in developing high-performance iOS and Android applications with a focus on smooth UI and robust functionality.",
+    social: { linkedin: "#", github: "#" },
+  },
+  {
+    name: "Muhammad Hasan Ali",
+    role: "MERN Stack Developer",
+    image: teamHasan,
+    bio: "Passionate full-stack developer specializing in MongoDB, Express.js, React, and Node.js to build powerful and scalable web solutions.",
     social: { linkedin: "#", github: "#" },
   },
 ];
@@ -361,7 +377,7 @@ const About = () => {
             </motion.h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}

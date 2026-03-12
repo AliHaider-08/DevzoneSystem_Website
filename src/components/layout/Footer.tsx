@@ -38,12 +38,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">D</span>
-              </div>
-              <span className="font-bold text-xl">
-                DevZone <span className="text-primary">System</span>
-              </span>
+              <img
+                src="/logo.png"
+                alt="DevZone System"
+                className="h-20 w-auto transition-all duration-300"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               We transform ideas into powerful digital solutions. Your vision, our expertise – together we build the future.
