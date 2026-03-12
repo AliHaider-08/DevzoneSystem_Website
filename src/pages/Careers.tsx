@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { Briefcase, MapPin, Clock, DollarSign, Users, Rocket, Heart, Coffee, Star, Zap, Shield, Sparkles, Search } from "lucide-react";
+import { Briefcase, MapPin, Clock, Banknote, Users, Rocket, Heart, Coffee, Star, Zap, Shield, Sparkles, Search } from "lucide-react";
 import { generateBreadcrumbSchema } from "@/lib/structured-data";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
@@ -16,7 +16,7 @@ const jobs = [
     title: "Senior React Developer",
     type: "Full-time",
     location: "Remote",
-    salary: "$80k - $120k",
+    salary: "PKR 1.8M - 2.8M (Monthly)",
     description: "We're looking for an experienced React developer to join our team and build amazing web applications.",
     requirements: ["5+ years React experience", "TypeScript proficiency", "REST API integration", "State management (Redux/Zustand)"],
     tags: ["React", "TypeScript", "Node.js"],
@@ -26,7 +26,7 @@ const jobs = [
     title: "Full Stack Developer",
     type: "Full-time",
     location: "Remote",
-    salary: "$70k - $100k",
+    salary: "PKR 1.5M - 2.2M (Monthly)",
     description: "Join us to work on end-to-end solutions using modern technologies and best practices.",
     requirements: ["3+ years full stack experience", "React & Node.js", "Database design", "Cloud services (AWS/GCP)"],
     tags: ["React", "Node.js", "PostgreSQL"],
@@ -36,7 +36,7 @@ const jobs = [
     title: "UI/UX Designer",
     type: "Full-time",
     location: "Remote",
-    salary: "$60k - $90k",
+    salary: "PKR 1.2M - 1.8M (Monthly)",
     description: "Create beautiful, intuitive designs that delight users and solve real problems.",
     requirements: ["3+ years design experience", "Figma expertise", "Design systems", "User research skills"],
     tags: ["Figma", "UI Design", "Prototyping"],
@@ -46,7 +46,7 @@ const jobs = [
     title: "Junior Developer",
     type: "Full-time",
     location: "Remote",
-    salary: "$40k - $60k",
+    salary: "PKR 600k - 950k (Monthly)",
     description: "Start your career with us! We provide mentorship and growth opportunities for passionate developers.",
     requirements: ["Basic JavaScript/TypeScript", "Willingness to learn", "Problem-solving mindset", "Team player"],
     tags: ["JavaScript", "React", "Learning"],
@@ -368,7 +368,7 @@ const Careers = () => {
                               {job.location}
                             </span>
                             <span className="flex items-center gap-2 text-primary bg-primary/10 px-3 py-1.5 rounded-full">
-                              <DollarSign className="h-4 w-4" />
+                              <Banknote className="h-4 w-4" />
                               {job.salary}
                             </span>
                           </div>

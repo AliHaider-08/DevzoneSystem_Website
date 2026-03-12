@@ -1,4 +1,5 @@
 import { useState } from "react";
+import hireExpertImg from "@/assets/HireExpert.png";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -12,6 +13,16 @@ import { generateBreadcrumbSchema } from "@/lib/structured-data";
 const categories = ["All", "Web Development", "Mobile App", "UI/UX Design", "AI Integration"];
 
 const projects = [
+  {
+    id: 0,
+    title: "Hire Expert",
+    category: "Web Development",
+    description: "A comprehensive freelancing platform developed for the Pakistan Software Export Board to empower the national digital economy.",
+    image: hireExpertImg,
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
+    client: "Pakistan Software Export Board (PSEB)",
+    results: "National-scale freelance ecosystem",
+  },
   {
     id: 1,
     title: "E-Commerce Platform",
@@ -148,8 +159,8 @@ const Portfolio = () => {
                   variant={activeCategory === category ? "default" : "outline"}
                   onClick={() => setActiveCategory(category)}
                   className={`h-10 rounded-full px-6 transition-all ${activeCategory === category
-                      ? "gradient-primary border-0 shadow-lg shadow-primary/20"
-                      : "hover:bg-primary/10 hover:text-primary border-border/50"
+                    ? "gradient-primary border-0 shadow-lg shadow-primary/20"
+                    : "hover:bg-primary/10 hover:text-primary border-border/50"
                     }`}
                 >
                   {category}
@@ -197,8 +208,10 @@ const Portfolio = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Button size="icon" variant="secondary" className="rounded-full">
-                        <ExternalLink className="h-4 w-4" />
+                      <Button size="icon" variant="secondary" className="rounded-full" asChild>
+                        <Link to={`/portfolio/${project.id}`}>
+                          <ExternalLink className="h-4 w-4" />
+                        </Link>
                       </Button>
                     </div>
                   </div>
