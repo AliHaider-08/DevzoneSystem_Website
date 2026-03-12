@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const testimonials = [
   {
     id: 1,
-    name: "Representative",
+    name: "Hire Expert Executive",
     role: "Pakistan Software Export Board",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
     content: "The Hire Expert platform has been instrumental in empowering our national digital economy. Devzone System delivered a scalable, professional solution that exceeded our expectations for PSEB.",
@@ -13,16 +13,16 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Dr. Hamza Ali",
-    role: "Founder, Healthcare Connect",
+    name: "E-Healthcare Founder",
+    role: "Healthcare Connect",
     image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop",
     content: "Our E-Healthcare platform's integration of AI chatbots and real-time consultations has revolutionized how we serve patients. The technical expertise of the team is truly world-class.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Sarah Edwards",
-    role: "Director, Media Hub",
+    name: "Media Hub Director",
+    role: "AI Podcast Solutions",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
     content: "The Podcast AI Agent transformed our content strategy. Automated transcript analysis and brand-aligned interactions have significantly increased our listener engagement levels.",
     rating: 5,
