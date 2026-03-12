@@ -4,38 +4,43 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import hireExpertImg from "@/assets/HireExpert.png";
+import eHealthcareImg from "@/assets/EHealthcare.png";
+import dashboardImg from "@/assets/Dashbaord.png";
+import ai1Img from "@/assets/Ai1.jpeg";
+
 const projects = [
   {
-    id: 1,
-    title: "E-Commerce Platform",
+    id: 0,
+    title: "Hire Expert",
     category: "Web Development",
-    description: "A full-featured online store with advanced inventory management and payment processing.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-    technologies: ["React", "Node.js", "PostgreSQL"],
-  },
-  {
-    id: 2,
-    title: "Fitness Tracking App",
-    category: "Mobile App",
-    description: "iOS and Android app for tracking workouts, nutrition, and health metrics.",
-    image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop",
-    technologies: ["React Native", "Firebase", "AI"],
-  },
-  {
-    id: 3,
-    title: "SaaS Dashboard",
-    category: "UI/UX Design",
-    description: "Modern analytics dashboard for a B2B software platform with real-time data visualization.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    technologies: ["Figma", "React", "D3.js"],
+    description: "A comprehensive freelancing platform developed for the Pakistan Software Export Board to empower the national digital economy.",
+    image: hireExpertImg,
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
   },
   {
     id: 4,
-    title: "AI Chatbot Platform",
+    title: "E-Healthcare",
+    category: "Web Development",
+    description: "A complete digital health platform including an online medicine ordering system, virtual consultations, and AI-powered symptom diagnosis.",
+    image: eHealthcareImg,
+    technologies: ["React.js", "Node.js", "Express.js", "Socket.io"],
+  },
+  {
+    id: 5,
+    title: "SaaS Multi-Purpose Dashboard",
+    category: "Web Development",
+    description: "A versatile SaaS dashboard designed for comprehensive business management, featuring real-time analytics, user administration, and multi-tenant support.",
+    image: dashboardImg,
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
+  },
+  {
+    id: 7,
+    title: "AI-Powered Smart Vending Machine",
     category: "AI Integration",
-    description: "Intelligent customer service chatbot with natural language processing capabilities.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-    technologies: ["Python", "OpenAI", "AWS"],
+    description: "Developed an AI-powered vending machine using RAG to recommend protein supplements and vitamin products based on user context and preferences.",
+    image: ai1Img,
+    technologies: ["RAG", "Multimodal AI", "LangChain", "Face Recognition"],
   },
 ];
 
@@ -98,8 +103,10 @@ const ProjectsSection = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="icon" variant="secondary" className="rounded-full hover:bg-accent hover:text-accent-foreground">
-                      <ExternalLink className="h-4 w-4" />
+                    <Button size="icon" variant="secondary" className="rounded-full hover:bg-accent hover:text-accent-foreground" asChild>
+                      <Link to={`/portfolio/${project.id}`}>
+                        <ExternalLink className="h-4 w-4" />
+                      </Link>
                     </Button>
                   </div>
                 </div>
