@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import dsLogo from "@/assets/DS Logo.png";
 
 
 const navLinks = [
@@ -49,7 +50,7 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/logo.png"
+            src={dsLogo}
             alt="DevZone System"
             className="h-20 w-auto"
           />
