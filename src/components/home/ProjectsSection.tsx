@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 import hireExpertImg from "@/assets/HireExpert.png";
-import eHealthcareImg from "@/assets/EHealthcare.png";
-import dashboardImg from "@/assets/Dashbaord.png";
 import ai1Img from "@/assets/Ai1.jpeg";
+import jhOilImg from "@/assets/JH.jpeg";
+import clenchSportsImg from "@/assets/clenchsports.png";
 
 const projects = [
   {
@@ -19,28 +19,28 @@ const projects = [
     technologies: ["React", "Node.js", "Express", "MongoDB"],
   },
   {
-    id: 4,
-    title: "E-Healthcare",
-    category: "Web Development",
-    description: "A complete digital health platform including an online medicine ordering system, virtual consultations, and AI-powered symptom diagnosis.",
-    image: eHealthcareImg,
-    technologies: ["React.js", "Node.js", "Express.js", "Socket.io"],
-  },
-  {
-    id: 5,
-    title: "SaaS Multi-Purpose Dashboard",
-    category: "Web Development",
-    description: "A versatile SaaS dashboard designed for comprehensive business management, featuring real-time analytics, user administration, and multi-tenant support.",
-    image: dashboardImg,
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
-  },
-  {
     id: 7,
-    title: "AI-Powered Smart Vending Machine",
+    title: "AI-Powered Smart Vending",
     category: "AI Integration",
-    description: "Developed an AI-powered vending machine using RAG to recommend protein supplements and vitamin products based on user context and preferences.",
+    description: "Advanced AI vending system using RAG to recommend protein supplements based on user context and multimodal inputs.",
     image: ai1Img,
-    technologies: ["RAG", "Multimodal AI", "LangChain", "Face Recognition"],
+    technologies: ["RAG", "LangChain", "Face Recognition"],
+  },
+  {
+    id: 9,
+    title: "JH Oil change",
+    category: "Mobile App",
+    description: "Specialized mobile application for streamlined automotive services, featuring real-time appointment tracking and maintenance reminders.",
+    image: jhOilImg,
+    technologies: ["React Native", "Firebase", "Node.js"],
+  },
+  {
+    id: 10,
+    title: "ClenchX Sports",
+    category: "WordPress",
+    description: "Premium WordPress e-commerce store for sports apparel, featuring WooCommerce integration and optimized product showcases.",
+    image: clenchSportsImg,
+    technologies: ["WordPress", "WooCommerce", "Elementor"],
   },
 ];
 
