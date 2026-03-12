@@ -15,7 +15,6 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== "undefined") {
@@ -26,14 +25,6 @@ const Header = () => {
     return false;
   });
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     if (isDark) {
@@ -53,7 +44,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b bg-slate-900/95 backdrop-blur-md border-white/5 ${isScrolled ? "py-2 shadow-2xl" : "py-4"}`}
+      className="fixed top-0 left-0 right-0 z-50 border-b bg-slate-900/95 backdrop-blur-md border-white/5 py-3 shadow-lg"
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
@@ -61,7 +52,7 @@ const Header = () => {
           <img
             src="/logo.png"
             alt="DevZone System"
-            className="h-20 w-auto transition-all duration-300"
+            className="h-20 w-auto"
           />
         </Link>
 
@@ -109,35 +100,28 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t shadow-2xl bg-slate-900 border-white/5"
-          >
-            <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={closeMobileMenu}
-                  className={`px-4 py-3 rounded-xl text-sm font-bold transition-all duration-200 ${location.pathname === link.path
-                    ? "bg-primary/20 text-white"
-                    : "text-slate-300 hover:text-white hover:bg-white/10"
-                    }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <Button asChild className="mt-2 gradient-primary border-0">
-                <Link to="/contact" onClick={closeMobileMenu}>Get Started</Link>
-              </Button>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isMobileMenuOpen && (
+        <div className="lg:hidden border-t shadow-2xl bg-slate-900 border-white/5">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={closeMobileMenu}
+                className={`px-4 py-3 rounded-xl text-sm font-bold transition-all duration-200 ${location.pathname === link.path
+                  ? "bg-primary/20 text-white"
+                  : "text-slate-300 hover:text-white hover:bg-white/10"
+                  }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Button asChild className="mt-2 gradient-primary border-0">
+              <Link to="/contact" onClick={closeMobileMenu}>Get Started</Link>
+            </Button>
+          </nav>
+        </div>
+      )}
     </header >
   );
 };
