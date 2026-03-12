@@ -11,6 +11,12 @@ import noirEssenceImg from "@/assets/Noir Essence.jpg";
 import hospitalImg from "@/assets/Hospital.jpg";
 import eHealthcareImg from "@/assets/EHealthcare.png";
 import dashboardImg from "@/assets/Dashbaord.png";
+import ai1Img from "@/assets/Ai1.jpeg";
+import ai2Img from "@/assets/AI2.jpg";
+
+import jhOilImg from "@/assets/JH.jpeg";
+import clenchSportsImg from "@/assets/clenchsports.png";
+import khorPestImg from "@/assets/Khor khuwair Pest.png";
 
 const projects = [
     {
@@ -119,7 +125,7 @@ const projects = [
         title: "AI-Powered Smart Vending Machine",
         category: "AI Integration",
         description: "Developed an AI-powered vending machine using RAG to recommend protein supplements and vitamin products based on user context and preferences. Integrated multimodal inputs (face recognition, text, voice) and a structured nutrition database.",
-        image: "https://images.unsplash.com/photo-1585007600263-ad26c4800763?w=800&h=600&fit=crop",
+        image: ai1Img,
         technologies: ["RAG", "Multimodal AI", "LangChain", "Face Recognition", "Python"],
         client: "Nutrition-Tech Client",
         results: "Personalized health recommendations",
@@ -132,13 +138,52 @@ const projects = [
         title: "Podcast-AI-Agent-Development",
         category: "AI Integration",
         description: "Designed and deployed an LLM-based RAG system to process podcast transcripts, enabling content analysis, automated question generation, and advisory-style interactions aligned with the podcast’s brand voice.",
-        image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&h=600&fit=crop",
+        image: ai2Img,
         technologies: ["LangChain", "FAISS", "LLM Fine-tuning", "Python", "OpenAI"],
         client: "Media Hub",
         results: "Scalable content engagement",
         features: ["Automated Question Generation", "Dynamic Content Analysis", "Brand-Voice Aligned Advisory", "Efficient FAISS Vector Search", "LLM-Powered Insights"],
         challenge: "Maintaining a specific brand voice across thousands of transcript segments while ensuring factual consistency from the audio source.",
         solution: "We fine-tuned an LLM on the podcast's unique conversational style and combined it with a RAG system and FAISS for rapid, relevant knowledge retrieval."
+    },
+    {
+        id: 9,
+        title: "JH Oil change",
+        category: "Mobile App",
+        description: "A specialized mobile application for streamlined oil change services, featuring appointment scheduling, service tracking, and automated maintenance reminders.",
+        image: jhOilImg,
+        technologies: ["React Native", "Firebase", "Node.js", "Google Maps API"],
+        client: "JH Automotive Services",
+        results: "Enhanced customer service efficiency",
+        features: ["Smart Appointment Scheduling", "Real-time Service Tracking", "Automated Maintenance Reminders", "Service History Management", "Integration with Local GIS"],
+        challenge: "Creating a seamless experience for users to book and track automotive services while managing a complex back-end of shop availability and technician schedules.",
+        solution: "We built a React Native application with a real-time Firebase backend, allowing for instant updates and notifications for both customers and service providers."
+    },
+    {
+        id: 10,
+        title: "ClenchX Sports",
+        category: "WordPress",
+        description: "A premium WordPress e-commerce store for sports apparel and equipment, featuring a custom product showcase and seamless WooCommerce integration.",
+        image: clenchSportsImg,
+        technologies: ["WordPress", "WooCommerce", "Elementor", "Custom CSS"],
+        client: "ClenchX Sports",
+        results: "Global sports retail platform",
+        features: ["Full WooCommerce Integration", "Dynamic Product Filtering", "Secure Payment Gateway", "Responsive Sports Store Layout", "Inventory Management System"],
+        challenge: "Designing a high-performance e-commerce store that stays fast despite high-resolution product imagery and extensive inventory.",
+        solution: "We optimized the WordPress store using advanced caching, image optimization techniques, and a lightweight Elementor-based architecture."
+    },
+    {
+        id: 11,
+        title: "Khor Khuwair Pest Control",
+        category: "WordPress",
+        description: "A professional service website for Khor Khuwair Pest Control, providing safe, reliable, and eco-friendly pest control solutions for homes and businesses.",
+        image: khorPestImg,
+        technologies: ["WordPress", "Elementor", "Contact Form 7", "Yoast SEO"],
+        client: "Khor Khuwair Pest Control",
+        results: "Increased local service visibility",
+        features: ["Service Booking System", "Eco-friendly Solution Showcase", "Local SEO Optimization", "Expert Advisory Section", "Multilingual Support (Optional)"],
+        challenge: "Communicating the balance between reliability, safety, and effectiveness in a competitive local service market.",
+        solution: "Our certified professionals ensure long-term protection using modern techniques, perfectly highlighted through a clean, trust-building UI/UX design."
     },
 ];
 

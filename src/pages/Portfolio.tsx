@@ -5,6 +5,11 @@ import noirEssenceImg from "@/assets/Noir Essence.jpg";
 import hospitalImg from "@/assets/Hospital.jpg";
 import eHealthcareImg from "@/assets/EHealthcare.png";
 import dashboardImg from "@/assets/Dashbaord.png";
+import ai1Img from "@/assets/Ai1.jpeg";
+import ai2Img from "@/assets/AI2.jpg";
+import jhOilImg from "@/assets/JH.jpeg";
+import clenchSportsImg from "@/assets/clenchsports.png";
+import khorPestImg from "@/assets/Khor khuwair Pest.png";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -15,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { generateBreadcrumbSchema } from "@/lib/structured-data";
 
-const categories = ["All", "Web Development", "Mobile App", "UI/UX Design", "AI Integration"];
+const categories = ["All", "Web Development", "Mobile App", "UI/UX Design", "AI Integration", "WordPress"];
 
 const projects = [
   {
@@ -93,7 +98,7 @@ const projects = [
     title: "AI-Powered Smart Vending Machine",
     category: "AI Integration",
     description: "Developed an AI-powered vending machine using RAG to recommend protein supplements and vitamin products based on user context and preferences. Integrated multimodal inputs (face recognition, text, voice) and a structured nutrition database.",
-    image: "https://images.unsplash.com/photo-1585007600263-ad26c4800763?w=800&h=600&fit=crop",
+    image: ai1Img,
     technologies: ["RAG", "Multimodal AI", "LangChain", "Face Recognition"],
     client: "Nutrition-Tech Client",
     results: "Personalized health recommendations",
@@ -103,10 +108,40 @@ const projects = [
     title: "Podcast-AI-Agent-Development",
     category: "AI Integration",
     description: "Designed and deployed an LLM-based RAG system to process podcast transcripts, enabling content analysis, automated question generation, and advisory-style interactions aligned with the podcast’s brand voice.",
-    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&h=600&fit=crop",
+    image: ai2Img,
     technologies: ["LangChain", "FAISS", "LLM fine-tuning", "Python"],
     client: "Media Hub",
     results: "Scalable content engagement",
+  },
+  {
+    id: 9,
+    title: "JH Oil change",
+    category: "Mobile App",
+    description: "A specialized mobile application for streamlined oil change services, featuring appointment scheduling, service tracking, and automated maintenance reminders.",
+    image: jhOilImg,
+    technologies: ["React Native", "Firebase", "Node.js"],
+    client: "JH Automotive Services",
+    results: "Enhanced customer service efficiency",
+  },
+  {
+    id: 10,
+    title: "ClenchX Sports",
+    category: "WordPress",
+    description: "A premium WordPress e-commerce store for sports apparel and equipment, featuring a custom product showcase and seamless WooCommerce integration.",
+    image: clenchSportsImg,
+    technologies: ["WordPress", "WooCommerce", "Elementor"],
+    client: "ClenchX Sports",
+    results: "Global sports retail platform",
+  },
+  {
+    id: 11,
+    title: "Khor Khuwair Pest Control",
+    category: "WordPress",
+    description: "A professional service website for Khor Khuwair Pest Control, providing safe, reliable, and eco-friendly pest control solutions for homes and businesses.",
+    image: khorPestImg,
+    technologies: ["WordPress", "Elementor", "Contact Form 7"],
+    client: "Khor Khuwair Pest Control",
+    results: "Increased local service visibility",
   },
 ];
 
