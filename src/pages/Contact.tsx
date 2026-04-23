@@ -194,7 +194,7 @@ const Contact = () => {
         structuredData={structuredData}
       />
       {/* Hero Section */}
-      <section className="pt-16 pb-0 relative overflow-hidden">
+      <section className="pt-32 pb-0 relative overflow-hidden">
         <div className="absolute inset-0 gradient-glow opacity-50" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">

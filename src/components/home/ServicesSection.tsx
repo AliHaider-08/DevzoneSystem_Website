@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Smartphone, Palette, Cloud, Brain, Headphones } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Palette, Cloud, Brain, Headphones, Monitor, Network, Cpu } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
@@ -15,9 +15,9 @@ const services = [
     description: "Native and cross-platform mobile applications that deliver seamless user experiences.",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "Beautiful, intuitive interfaces designed to engage users and drive conversions.",
+    icon: Monitor,
+    title: "Desktop Application",
+    description: "Robust desktop software solutions for Windows, macOS, and Linux platforms.",
   },
   {
     icon: Cloud,
@@ -33,6 +33,16 @@ const services = [
     icon: Headphones,
     title: "Tech Consulting",
     description: "Expert guidance on technology strategy, architecture, and digital transformation.",
+  },
+  {
+    icon: Network,
+    title: "Blockchain Development",
+    description: "Secure, decentralized blockchain applications, smart contracts, and full Web3 solutions.",
+  },
+  {
+    icon: Cpu,
+    title: "Embedded Systems",
+    description: "Custom firmware development and hardware integration for IoT and smart devices.",
   },
 ];
 

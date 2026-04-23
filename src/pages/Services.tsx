@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Check, ArrowRight, Code, Smartphone, Palette, Cloud, Brain, Headphones, Zap, Shield, Rocket, Cpu, Users, Lock } from "lucide-react";
+import { Check, ArrowRight, Code, Smartphone, Palette, Cloud, Brain, Headphones, Zap, Shield, Rocket, Cpu, Users, Lock, Monitor, Network } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
@@ -24,10 +24,10 @@ const services = [
     color: "from-accent to-teal-400",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "Intuitive and beautiful interfaces designed for maximum user engagement.",
-    features: ["User Research", "Visual Design", "Prototyping"],
+    icon: Monitor,
+    title: "Desktop Application",
+    description: "Robust and high-performance desktop software for Windows, macOS, and Linux.",
+    features: ["Electron & Tauri", "Native Integrations", "Cross-Platform"],
     color: "from-primary to-accent",
   },
   {
@@ -41,7 +41,7 @@ const services = [
     icon: Brain,
     title: "AI Integration",
     description: "Smart automation and machine learning models tailored to your business.",
-    features: ["Custom AI Agents", "Data Science", "Automations"],
+    features: ["Custom AI Agents", "Data Science", "AI-Powered Automations , Machine Learning , AI Chatbots , Natural Language Processing , Computer Vision , Deep Learning , Generative AI"],
     color: "from-teal-400 to-accent",
   },
   {
@@ -50,6 +50,20 @@ const services = [
     description: "Strategic guidance to help you navigate complex technology decisions.",
     features: ["Architecture Review", "Tech Strategy", "Security Audits"],
     color: "from-accent to-primary",
+  },
+  {
+    icon: Network,
+    title: "Blockchain Development",
+    description: "Secure and decentralized blockchain applications, smart contracts, and Web3 solutions.",
+    features: ["Smart Contracts", "DeFi Solutions", "Web3 Integration"],
+    color: "from-blue-400 to-accent",
+  },
+  {
+    icon: Cpu,
+    title: "Embedded Systems",
+    description: "Custom firmware and hardware integration for IoT and connected devices.",
+    features: ["IoT Development", "Firmware", "Hardware Integration"],
+    color: "from-teal-400 to-primary",
   },
 ];
 
