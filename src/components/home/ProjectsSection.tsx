@@ -8,6 +8,7 @@ import hireExpertImg from "@/assets/HireExpert.png";
 import ai1Img from "@/assets/Ai1.jpeg";
 import jhOilImg from "@/assets/JH.jpeg";
 import clenchSportsImg from "@/assets/clenchsports.png";
+import mediMindImg from "@/assets/MediMind.png";
 
 const projects = [
   {
@@ -41,6 +42,14 @@ const projects = [
     description: "Premium WordPress e-commerce store for sports apparel, featuring WooCommerce integration and optimized product showcases.",
     image: clenchSportsImg,
     technologies: ["WordPress", "WooCommerce", "Elementor"],
+  },
+  {
+    id: 12,
+    title: "MediMind",
+    category: "Mobile App",
+    description: "A smart digital healthcare assistant that tracks medications, monitors health metrics, and provides personalized AI-powered wellness insights.",
+    image: mediMindImg,
+    technologies: ["React Native", "Firebase", "Node.js"],
   },
 ];
 
@@ -85,7 +94,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -99,7 +108,7 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-48 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

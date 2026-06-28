@@ -10,6 +10,7 @@ import ai2Img from "@/assets/AI2.jpg";
 import jhOilImg from "@/assets/JH.jpeg";
 import clenchSportsImg from "@/assets/clenchsports.png";
 import khorPestImg from "@/assets/Khor khuwair Pest.png";
+import mediMindImg from "@/assets/MediMind.png";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -143,6 +144,16 @@ const projects = [
     client: "Khor Khuwair Pest Control",
     results: "Increased local service visibility",
   },
+  {
+    id: 12,
+    title: "MediMind",
+    category: "Mobile App",
+    description: "A smart digital healthcare assistant that tracks medications, monitors health metrics, and provides personalized AI-powered wellness insights.",
+    image: mediMindImg,
+    technologies: ["React Native", "Firebase", "Node.js", "Tailwind CSS"],
+    client: "MediMind Tech",
+    results: "Empowering personal health tracking",
+  },
 ];
 
 const Portfolio = () => {
@@ -206,19 +217,19 @@ const Portfolio = () => {
       {/* Filter & Search */}
       <section className="py-10">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-card/30 p-4 rounded-2xl border border-border/50 backdrop-blur-sm">
+          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 bg-card/30 p-4 rounded-2xl border border-border/50 backdrop-blur-sm">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-wrap justify-center md:justify-start gap-2"
+              className="flex flex-row md:flex-wrap overflow-x-auto max-w-full w-full md:w-auto no-scrollbar snap-x justify-start md:justify-start gap-2 scroll-smooth select-none pb-2 md:pb-0"
             >
               {categories.map((category) => (
                 <Button
                   key={category}
                   variant={activeCategory === category ? "default" : "outline"}
                   onClick={() => setActiveCategory(category)}
-                  className={`h-10 rounded-full px-6 transition-all ${activeCategory === category
+                  className={`h-10 rounded-full px-6 shrink-0 snap-start transition-all ${activeCategory === category
                     ? "gradient-primary border-0 shadow-lg shadow-primary/20"
                     : "hover:bg-primary/10 hover:text-primary border-border/50"
                     }`}
@@ -250,7 +261,7 @@ const Portfolio = () => {
       {/* Projects Grid */}
       <section className="py-10 pb-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -264,7 +275,7 @@ const Portfolio = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-48 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const services = [
   {
@@ -145,6 +146,21 @@ const Services = () => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-background/80 dark:bg-background/85" />
+        </div>
+
         <BackgroundShapes />
         <RunningText />
         <div className="container mx-auto px-4 relative z-10 text-center">

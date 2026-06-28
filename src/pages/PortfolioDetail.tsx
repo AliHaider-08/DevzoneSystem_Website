@@ -17,6 +17,7 @@ import ai2Img from "@/assets/AI2.jpg";
 import jhOilImg from "@/assets/JH.jpeg";
 import clenchSportsImg from "@/assets/clenchsports.png";
 import khorPestImg from "@/assets/Khor khuwair Pest.png";
+import mediMindImg from "@/assets/MediMind.png";
 
 const projects = [
     {
@@ -184,6 +185,26 @@ const projects = [
         features: ["Service Booking System", "Eco-friendly Solution Showcase", "Local SEO Optimization", "Expert Advisory Section", "Multilingual Support (Optional)"],
         challenge: "Communicating the balance between reliability, safety, and effectiveness in a competitive local service market.",
         solution: "Our certified professionals ensure long-term protection using modern techniques, perfectly highlighted through a clean, trust-building UI/UX design."
+    },
+    {
+        id: 12,
+        title: "MediMind",
+        category: "Mobile App",
+        description: "A smart digital healthcare assistant that tracks medications, monitors health metrics, and provides personalized AI-powered wellness insights.",
+        image: mediMindImg,
+        technologies: ["React Native", "Firebase", "Node.js", "Tailwind CSS", "Redux Toolkit", "Push Notifications"],
+        client: "MediMind Tech",
+        results: "Empowering personal health tracking",
+        features: [
+            "AI-powered Symptom Tracker",
+            "Smart Medication Reminders",
+            "Doctor Consultation Scheduler",
+            "Secure Medical Document Vault",
+            "Interactive Health Metric Graphs",
+            "Offline Mode with Syncing"
+        ],
+        challenge: "Developing a reliable mobile app that guarantees real-time notification delivery for critical medication times and stores healthcare records locally under strict privacy and encryption protocols.",
+        solution: "We designed a robust local-first SQLite architecture synced securely with Firebase, utilizing background notification services and end-to-end encryption for file storage."
     },
 ];
 

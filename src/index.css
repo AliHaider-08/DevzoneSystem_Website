@@ -1,9 +1,9 @@
+/* HaiderTech Design System - Professional Tech Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* HaiderTech Design System - Professional Tech Aesthetic */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @layer base {
   :root {
@@ -126,11 +126,17 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight;
   }
 
-  code, pre {
+  code,
+  pre {
     font-family: 'JetBrains Mono', monospace;
   }
 }
@@ -164,6 +170,19 @@
   }
 
   .glass-dark {
-    @apply bg-card/80 backdrop-blur-lg border border-border/50;
+    @apply bg-card/85 backdrop-blur-lg border border-border/50;
+  }
+
+  /* Hide scrollbar for WebKit browsers */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }

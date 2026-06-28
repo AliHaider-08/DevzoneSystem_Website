@@ -18,7 +18,7 @@ import teamHasan from "@/assets/Hasan.jpeg";
 const team = [
   {
     name: "Ali Haider",
-    role: "Founder & Full Stack Developer",
+    role: "CEO & Lead Developer",
     image: teamAli,
     bio: "Visionary leader and expert in modern web technologies. Building robust and scalable applications.",
     social: { linkedin: "#", github: "#" },
@@ -53,7 +53,7 @@ const team = [
   },
   {
     name: "Muhammad Umair",
-    role: "Data Scientist & AI Engineer",
+    role: "Data Scientist",
     image: teamUmair,
     bio: "Specializing in data-driven solutions, predictive modeling, and advanced AI architectures to turn complex data into actionable insights.",
     social: { linkedin: "#", github: "#" },

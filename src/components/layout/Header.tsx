@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 import dsLogo from "@/assets/DS Logo.png";
 
 
@@ -100,28 +101,36 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden border-t shadow-2xl bg-slate-900 border-white/5">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={closeMobileMenu}
-                className={`px-4 py-3 rounded-xl text-sm font-bold transition-all duration-200 ${location.pathname === link.path
-                  ? "bg-primary/20 text-white"
-                  : "text-slate-300 hover:text-white hover:bg-white/10"
-                  }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button asChild className="mt-2 gradient-primary border-0">
-              <Link to="/contact" onClick={closeMobileMenu}>Get Started</Link>
-            </Button>
-          </nav>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="lg:hidden border-t shadow-2xl bg-slate-900 border-white/5 overflow-hidden"
+          >
+            <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={closeMobileMenu}
+                  className={`px-4 py-3 rounded-xl text-sm font-bold transition-all duration-200 ${location.pathname === link.path
+                    ? "bg-primary/20 text-white"
+                    : "text-slate-300 hover:text-white hover:bg-white/10"
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Button asChild className="mt-2 gradient-primary border-0">
+                <Link to="/contact" onClick={closeMobileMenu}>Get Started</Link>
+              </Button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header >
   );
 };
